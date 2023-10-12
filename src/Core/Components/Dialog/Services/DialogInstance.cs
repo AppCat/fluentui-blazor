@@ -16,9 +16,9 @@ public sealed class DialogInstance
 
     public object Content { get; } = default!;
 
-    public DialogParameters Parameters { get; internal set; }
+    public DialogParameters Parameters { get; set; }
 
-    internal Dictionary<string, object>? GetParameterDictionary()
+    public Dictionary<string, object>? GetParameterDictionary()
     {
         if (Content is null)
         {
